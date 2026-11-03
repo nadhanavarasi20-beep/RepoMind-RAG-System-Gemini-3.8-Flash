@@ -1,0 +1,28 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Product Intelligence Studio</title><link rel="stylesheet" href="/static/style.css"></head>
+<body>
+<nav class="nav"><div class="logo"><span>✳</span><div><b>FORM & FUNCTION</b><small>PRODUCT INTELLIGENCE STUDIO</small></div></div><div class="nav-right"><span class="live-dot"></span> WORKSPACE READY <span class="nav-pill">MULTI-AGENT AI</span></div></nav>
+<main class="wrap">
+<section class="hero"><div class="hero-copy"><div class="eyebrow">THE PRODUCT CONTENT WORKBENCH</div><h1>From product data<br>to <em>brand-ready stories.</em></h1><p>One coordinated studio for product visuals, technical specifications and customer voice — transformed into clear, consistent content.</p><div class="hero-tags"><span>01&nbsp; Understand</span><span>02&nbsp; Synthesize</span><span>03&nbsp; Create</span></div></div><div class="hero-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="art-card"><div class="art-top"><span>PRODUCT SIGNALS</span><span>✳</span></div><div class="art-shape"><div class="shape-core"></div><div class="shape-ring"></div><div class="shape-leaf"></div></div><div class="art-bottom"><b>One source of truth.</b><small>Many ways to tell the story.</small></div></div><div class="float-note note-a">✦ &nbsp; IMAGE</div><div class="float-note note-b">▤ &nbsp; SPEC SHEET</div><div class="float-note note-c">♡ &nbsp; CUSTOMER VOICE</div></div></section>
+<section class="main-panel">
+<div class="panel-heading"><div><div class="kicker">01 / PRODUCT BRIEF</div><h2>Start with your product</h2><p>Share what you know. Add one source or all three.</p></div><div class="step-bubble">01</div></div>
+<form id="studioForm">
+<div class="form-grid">
+<label>PRODUCT NAME<input name="product_name" placeholder="e.g. Solace Wireless Headphones"></label>
+<label>PRODUCT CATEGORY<input name="category" placeholder="e.g. Personal audio"></label>
+<label>WHO IS IT FOR?<input name="audience" placeholder="e.g. Commuters, creators, music lovers"></label>
+<label>CONTENT PERSONALITY<select name="tone"><option>Confident & clear</option><option>Warm & friendly</option><option>Premium & refined</option><option>Bold & energetic</option><option>Minimal & factual</option></select></label>
+</div>
+<div class="source-heading"><div><div class="kicker">02 / SOURCE MATERIAL</div><h2>Bring your product into focus</h2></div><span>UPLOAD OR PASTE</span></div>
+<div class="upload-grid">
+<label class="drop-card"><input type="file" name="image" accept="image/png,image/jpeg,image/webp"><span class="drop-icon">◈</span><b>Product imagery</b><small>Visual source · PNG, JPG, WEBP</small><span class="choose">Choose image <i>↗</i></span><span class="picked"></span></label>
+<label class="drop-card"><input type="file" name="spec_pdf" accept="application/pdf"><span class="drop-icon">▤</span><b>Specification sheet</b><small>Technical source · PDF</small><span class="choose">Choose PDF <i>↗</i></span><span class="picked"></span></label>
+<label class="drop-card"><input type="file" name="reviews_file" accept=".txt,.csv,text/plain,text/csv"><span class="drop-icon">❝</span><b>Customer reviews</b><small>Customer voice · TXT, CSV</small><span class="choose">Choose file <i>↗</i></span><span class="picked"></span></label>
+</div>
+<label class="paste-label">OR PASTE CUSTOMER FEEDBACK<textarea name="reviews_text" rows="3" placeholder="Paste review snippets here — one review per line is ideal."></textarea></label>
+<div class="submit-row"><div><b>Ready to orchestrate?</b><small>Independent agents process each source. Optional Gemini enhancement never blocks local output.</small></div><button id="runBtn" type="submit">Build content studio <span>↗</span></button></div>
+</form></section>
+<section id="loading" class="loading hidden"><div class="loader"></div><div><b>Orchestrating your product agents</b><p>Reading sources, mapping signals and shaping your content pack…</p></div></section>
+<section id="error" class="error hidden"></section>
+<section id="results" class="results hidden"><div class="results-head"><div><div class="kicker">03 / THE OUTPUT STUDIO</div><h2>Your content, orchestrated.</h2><p id="generationMessage"></p></div><a id="download" class="download" href="#">↓ &nbsp; Export JSON</a></div><div id="agentBoard" class="agent-board"></div><div class="result-grid" id="resultGrid"></div><div class="footnote" id="disclaimer"></div></section>
+<footer><span>FORM & FUNCTION / PRODUCT INTELLIGENCE STUDIO</span><span>Built for grounded, consistent product storytelling.</span></footer>
+</main><script src="/static/app.js"></script></body></html>
